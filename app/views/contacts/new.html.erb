@@ -1,0 +1,24 @@
+<h1>New Contact</h1>
+
+<%= form_with(model: [@category, @contact]) do |form| %>
+  <div>
+    <%= form.label :firstname %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :phonenumber %>
+    <%= form.telephone_field :phonenumber %>
+  </div>
+
+  <div>
+    <%= form.submit "Create Contact" %>
+  </div>
+<% end %>
+
+<p><%= link_to 'Back', category_contacts_path(@category) %></p>

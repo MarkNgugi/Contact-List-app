@@ -1,11 +1,11 @@
 <h1>Contacts Book</h1>
-<p> <a href="">Add Category</a> </p>
+<p> <a href="<%=new_category_path%>">Add Category</a> </p>
 <hr>
 
 <h3>Categories</h3>
 
 <ul>
-  <li> <a href="<%=categories_path%>">All</a> </li>
+    <a href="<%= categories_path %>"></a> 
 
   <% @categories.each do |category| %>
     <li>
