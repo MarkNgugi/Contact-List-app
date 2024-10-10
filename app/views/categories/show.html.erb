@@ -1,16 +1,14 @@
 <h1>Contacts Book</h1>
-<p><%=link_to "Add New Contact", new_category_contact_path(@category)%></p>
+<p><%= link_to "Add New Contact", new_category_contact_path(@category) %></p>
 <hr>
 
 <h1>Contacts in <%= @category.name %></h1>
 
 <ul>
-<% @contacts.each do |contact|%>
+<% @contacts.each do |contact| %>
     <li>
-        <%=link_to contact.firstname, contact_path(contact)%>
+        <%= link_to contact.firstname, category_contact_path(@category, contact) %> 
+        <%= link_to 'Edit', edit_category_contact_path(@category, contact) %>        
     </li>
-
-<%end%>
+<% end %>
 </ul>
-
-

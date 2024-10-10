@@ -1,8 +1,8 @@
-<h1>New Contact</h1>
+<h1>Edit Contact</h1>
 
 <%= form_with(model: [@category, @contact]) do |form| %>
   <div>
-    <%= form.label :firstname %>
+    <%= form.label :firstnamename %>
     <%= form.text_field :firstnamename %>
   </div>
 
@@ -17,7 +17,7 @@
   </div>
 
   <div>
-    <%= form.submit "Create Contact" %>
+    <%= form.submit "Update Contact" %>
   </div>
 <% end %>
 

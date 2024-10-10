@@ -1,5 +1,5 @@
 <h1>Contact Details</h1>
-
-<p><strong>Name:</strong> <%= @contact.name %></p>
-<p><strong>Email:</strong> <%= @contact.email %></p>
-<p><strong>Phone:</strong> <%= @contact.phone %></p>
+<p>First Name: <%= @contact.firstname %></p>
+<p>Email: <%= @contact.email %></p> <!-- Assuming you have an email field -->
+<p><%= link_to 'Edit', edit_category_contact_path(@category, @contact) %></p>
+<p><%= link_to 'Back to Contacts', category_contacts_path(@category) %></p>
