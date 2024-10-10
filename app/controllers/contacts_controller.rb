@@ -32,6 +32,12 @@ class ContactsController < ApplicationController
     end
   end
 
+  def destroy
+    @contact = @category.contacts.find(params[:id]) 
+    @contact.destroy
+    redirect_to category_contacts_path(@category), notice: 'Contact was successfully deleted.'
+  end
+
 
   private
 

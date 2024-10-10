@@ -1,5 +1,8 @@
+
 <h1>Contact Details</h1>
 <p>First Name: <%= @contact.firstname %></p>
-<p>Email: <%= @contact.email %></p> <!-- Assuming you have an email field -->
+<p>Email: <%= @contact.email %></p> 
 <p><%= link_to 'Edit', edit_category_contact_path(@category, @contact) %></p>
+<%= link_to 'Delete', category_contact_path(@category, @contact), method: :delete, data: { confirm: 'Are you sure?' } %>
 <p><%= link_to 'Back to Contacts', category_contacts_path(@category) %></p>
+
