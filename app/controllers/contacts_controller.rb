@@ -1,4 +1,7 @@
 class ContactsController < ApplicationController
-  def index
+
+  def show
+    @contact = Contact.find(params[:id])
   end
+
 end

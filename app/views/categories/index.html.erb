@@ -1,0 +1,26 @@
+<h1>Contacts Book</h1>
+<p> <a href="">Add Category</a> </p>
+<hr>
+
+<h3>Categories</h3>
+
+<ul>
+  <li> <a href="<%=categories_path%>">All</a> </li>
+
+  <% @categories.each do |category| %>
+    <li>
+      <%=link_to category.name, category_path(category)%> 
+    </li>
+  <% end %>
+</ul>
+
+
+
+
+
+
+
+
+
+
+ 
